@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent {
+        node{
+            label 'workstation-prasad'
+        }
+    }
 
     stages {
         stage('Build') {
@@ -19,3 +23,4 @@ pipeline {
         }
     }
 }
+
