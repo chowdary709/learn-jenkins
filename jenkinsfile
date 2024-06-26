@@ -8,12 +8,12 @@ pipeline {
     stages {
         stage('time') {
             steps {
-                // Run shell command to capture date and time
-                script {
-                    def currentTime = sh(script: 'date', returnStdout: true).trim()
-                    echo "Current time is: ${currentTime}"
-                }
+            // Run shell command to capture date and time
+            script {
+                def currentTime = sh(script: 'date', returnStdout: true).trim()
+                echo "Current time is: ${currentTime}"
             }
+        }
         stage('Build') {
             steps {
                 echo 'building..'
