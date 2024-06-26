@@ -1,15 +1,13 @@
 pipeline {
     agent any
-    options {
-        skipStagesAfterUnstable()
-    }
+
     stages {
         stage('Build') {
             steps {
                 echo 'building..'
             }
         }
-        stage('Test'){
+        stage('Test') {
             steps {
                 echo 'testing..'
             }
