@@ -44,8 +44,6 @@ pipeline {
                     echo "Current time is: ${currentTime}"
                 }
             }
-        }
-
         stage('Build') {
             steps {
                 echo 'building..'
