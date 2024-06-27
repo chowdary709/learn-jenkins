@@ -18,9 +18,7 @@ pipeline {
                 sh """
                 ls -a
                 pwd 
-                cal 
-                sudo su -
-                mkdir prasad
+                cal
                 """
             }
         }
