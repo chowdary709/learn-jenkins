@@ -4,6 +4,9 @@ pipeline {
             label 'workstation-prasad'
         }
     }
+    options {
+        ansiColor('xterm')
+    }
 
     stages {
         stage('one') {
