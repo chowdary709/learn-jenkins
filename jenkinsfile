@@ -1,7 +1,7 @@
 pipeline {
     agent {
         node {
-            label 'workstation-prasad' // Ensure this label matches your CentOS node
+            label 'workstation-prasad'
         }
     }
     parameters {
@@ -37,6 +37,7 @@ pipeline {
                 echo 'dev'
             }
         }
+
         stage('Example') {
             steps {
                 echo "Hello ${params.PERSON}"
@@ -51,6 +52,7 @@ pipeline {
             }
         }
     }
+    
     post {
         always {
             echo 'I will always say Hello again!'
