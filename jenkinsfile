@@ -7,19 +7,19 @@ pipeline {
 
     stages {
         stage('one') {
-            steps {                 // step
-                echo '2'
-                sh 
+            steps {
+                echo 'Stage one'
+                sh 'echo "Hello from stage one"'
             }
         }
-        stage ('two') {
+        stage('two') {
             steps {
-                echo '2'
-                sh """
+                echo 'Stage two'
+                sh '''
                 ls -a
-                pwd 
+                pwd
                 cal
-                """
+                '''
             }
         }
     }
