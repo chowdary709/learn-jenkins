@@ -37,13 +37,6 @@ pipeline {
     }
 
     stages {
-        stage('time') {
-            steps {
-                script {
-                    def currentTime = sh(script: 'date', returnStdout: true).trim()
-                    echo "Current time is: ${currentTime}"
-                }
-            }
         stage('Build') {
             steps {
                 echo 'building..'
