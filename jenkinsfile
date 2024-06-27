@@ -20,6 +20,10 @@ pipeline {
             steps {
                 echo 'deploying..'
             }
+        stage('dev') {
+            steps {
+                echo 'dovelping..'
+            }
         }
     }
 }
