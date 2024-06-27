@@ -1,0 +1,19 @@
+pipeline {
+    agent {
+        node {
+            lable 'workstation-prasad'
+        }
+    }
+    stages {
+        stage (test) {
+            step {
+                echo 'hello world'
+            }
+        }
+
+        stage ('Deploy') {
+            step {
+                echo 'deploying..'
+        }
+    }
+}
