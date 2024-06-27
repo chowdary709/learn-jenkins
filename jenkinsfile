@@ -14,17 +14,6 @@ pipeline {
     }
 
     stages {
-        stage('Example Branch Check') {
-            when {
-                expression {
-                    return env.BRANCH_NAME == 'main'
-                }
-            }
-            steps {
-                echo 'I only execute on the main branch'
-            }
-        }
-
         stage('Build') {
             steps {
                 echo 'building..'
