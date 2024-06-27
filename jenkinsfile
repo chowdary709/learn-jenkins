@@ -22,7 +22,7 @@ pipeline {
             }
         stage('dev') {
             steps {
-                echo 'dovelping..'
+                echo 'dev'
             }
         }
     }
