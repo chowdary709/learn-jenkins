@@ -9,15 +9,19 @@ pipeline {
         stage('one') {
             steps {                 // step
                 echo '2'
-                sh """
-                pwd 
-                cal
-                """
+                sh 
             }
         }
         stage ('two') {
             steps {
                 echo '2'
+                sh """
+                ls -a
+                pwd 
+                cal 
+                sudo su -
+                mkdir prasad
+                """
             }
         }
     }
