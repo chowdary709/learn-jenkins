@@ -6,7 +6,7 @@ pipeline {
     }
     
     environment {
-        BRANCH_NAME = 'main' // Ensure single quotes around the branch name
+        BRANCH_NAME = "${params.CHOICE}" // Use double quotes to interpolate parameter value
     }
 
     parameters {
