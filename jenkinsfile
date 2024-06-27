@@ -14,6 +14,17 @@ pipeline {
     }
 
     stages {
+        stage('Example Branch Check') {
+            when {
+                expression {
+                    return env.BRANCH_NAME == 'main'
+                }
+            }
+            steps {
+                echo 'I only execute on the main branch'
+            }
+        }
+
         stage('Build') {
             steps {
                 echo 'building..'
@@ -35,13 +46,6 @@ pipeline {
             }
         }
 
-        stage('Example') {
-            if (env.BRANCH_NAME == 'main') {
-                echo 'I only execute on the master branch'
-            } else {
-                echo 'I execute elsewhere'
-            }
-    }
 
         stage('Example') {
             steps {
@@ -69,4 +73,3 @@ pipeline {
         }
     }
 }
-
